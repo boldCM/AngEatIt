@@ -1,0 +1,22 @@
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+
+.BottomNavbar {
+  height: 56px;
+  background-color: var(--primary-color);
+  border-top: 2px solid var(--active-color);
+  display: flex;
+  justify-content: space-around;
+  padding-right: 6rem;
+}
+
+.NavButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 5px;
+}
