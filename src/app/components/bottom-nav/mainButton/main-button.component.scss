@@ -1,0 +1,43 @@
+button {
+  background: none;
+  border: none;
+  bottom: 0;
+  right: 0;
+  position: fixed;
+  z-index: 2;
+
+  img {
+    margin-right: 11px;
+    margin-bottom: 12px;
+  }
+}
+
+.triangle {
+  width: 0;
+  height: 0;
+  border-left: 45px solid transparent;
+  border-right: 45px solid transparent;
+  border-top: 45px solid white;
+  background-color: transparent;
+  bottom: 0;
+  right: 0;
+  margin-right: 12px;
+  margin-bottom: 11px;
+  position: fixed;
+  z-index: 2;
+}
+
+.triangle__border {
+  width: 0;
+  height: 0;
+  border-left: 46px solid transparent;
+  border-right: 46px solid transparent;
+  border-top: 46px solid var(--active-color);
+  background-color: transparent;
+  bottom: 0;
+  right: 0;
+  margin-right: 10.5px;
+  margin-bottom: 9px;
+  position: fixed;
+  z-index: 1;
+}
