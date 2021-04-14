@@ -6,10 +6,16 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./main-button.component.scss'],
 })
 export class MainButtonComponent implements OnInit {
+  public isMenuOpen: boolean = false;
   constructor() {}
 
   ngOnInit(): void {}
   public handleOverlay(): void {
-    return console.log('open overlay');
+    if (!this.isMenuOpen) {
+      this.isMenuOpen = true;
+      // document.documentElement.style.setProperty('$open', 'true');
+    } else {
+      this.isMenuOpen = false;
+    }
   }
 }
