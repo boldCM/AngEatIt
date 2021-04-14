@@ -1,14 +1,21 @@
+$open: false;
+
 .blur {
   width: 100%;
   height: 100%;
-  // background: black;
   background: var(--gradient-color);
   position: fixed;
   opacity: 0;
   top: 0;
   right: 0;
   backdrop-filter: blur(10px);
-  // ${({ open }) => (!open ? "opacity:0; visibility:hidden;" : "opacity:0.7;")};
+  @if $open {
+    opacity: 0;
+    visibility: hidden;
+  } @else {
+    opacity: 0.7;
+  }
+
   transition: opacity 0.3s ease-in-out;
 }
 
@@ -16,7 +23,11 @@
   right: 0;
   top: 0;
   text-align: right;
-  // transform: ${({ open }) => (open ? "translateX(0);" : "translateX(100%);")};
+  @if $open {
+    transform: translateX(0);
+  } @else {
+    transform: translateX(100%);
+  }
   transition: transform 0.3s ease-in-out;
   display: flex;
   flex-direction: column;

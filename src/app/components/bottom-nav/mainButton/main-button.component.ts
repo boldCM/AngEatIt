@@ -13,10 +13,9 @@ export class MainButtonComponent implements OnInit {
   public handleOverlay(): void {
     if (!this.isMenuOpen) {
       this.isMenuOpen = true;
+      // document.documentElement.style.setProperty('$open', 'true');
     } else {
       this.isMenuOpen = false;
     }
-
-    console.log('ich will meinen button');
   }
 }
