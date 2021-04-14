@@ -1,12 +1,4 @@
-import {
-  Component,
-  EventEmitter,
-  Injector,
-  OnInit,
-  Output,
-} from '@angular/core';
-import { OverlayComponent } from 'src/app/components/overlay/overlay.component';
-import { OverlayService } from 'src/app/components/overlay/overlay.service';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-main-button',
@@ -14,22 +6,17 @@ import { OverlayService } from 'src/app/components/overlay/overlay.service';
   styleUrls: ['./main-button.component.scss'],
 })
 export class MainButtonComponent implements OnInit {
-  @Output() public open = new EventEmitter<any>();
-
-  constructor(
-    public overlay: OverlayService,
-    public overlayComponent: OverlayComponent
-  ) {
-    // customElements.define(OverlayComponent)
-    document.body.appendChild(OverlayComponent as any);
-  }
+  public isMenuOpen: boolean = false;
+  constructor() {}
 
   ngOnInit(): void {}
-  // public handleOverlay(): void {
-  // this.open.emit('app-overlay');
-  // document.createElement('overlay');
-  // document.querySelector('app-overlay');
-  // document.appendChild('.overlay');
+  public handleOverlay(): void {
+    if (!this.isMenuOpen) {
+      this.isMenuOpen = true;
+    } else {
+      this.isMenuOpen = false;
+    }
 
-  // }
+    console.log('ich will meinen button');
+  }
 }

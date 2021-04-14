@@ -1,10 +1,8 @@
 <div class="triangle__border">
   <div class="triangle">
-    <button (click)="overlay.showOverlayAsComponent()">
+    <button (click)="handleOverlay()">
       <img src="../../../../../assets/svg/mainButton.svg" alt="mainButton" />
     </button>
   </div>
 </div>
-<app-overlay *ngIf="open"></app-overlay>
-<!-- overlay hier rendern oder in bottomNav? -->
-<!-- oder mit den [] weils ja nach vorne gegeben wird... -->
+<app-overlay *ngIf="isMenuOpen"></app-overlay>

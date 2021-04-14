@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { BottomNavComponent } from './components/bottom-nav/bottom-nav.component';
 import { MainButtonComponent } from './components/bottom-nav/mainButton/main-button.component';
 import { OverlayComponent } from './components/overlay/overlay.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -14,9 +15,8 @@ import { OverlayComponent } from './components/overlay/overlay.component';
     MainButtonComponent,
     OverlayComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule],
+  imports: [BrowserModule, AppRoutingModule, BrowserAnimationsModule],
   providers: [],
   bootstrap: [AppComponent],
-  entryComponents: [OverlayComponent],
 })
 export class AppModule {}
