@@ -7,6 +7,7 @@ import { BottomNavComponent } from './components/bottom-nav/bottom-nav.component
 import { MainButtonComponent } from './components/bottom-nav/mainButton/main-button.component';
 import { OverlayComponent } from './components/overlay/overlay.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { OverlayItemComponent } from './components/overlay/overlay-item/overlay-item.component';
 
 @NgModule({
   declarations: [
@@ -14,6 +15,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     BottomNavComponent,
     MainButtonComponent,
     OverlayComponent,
+    OverlayItemComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, BrowserAnimationsModule],
   providers: [],
