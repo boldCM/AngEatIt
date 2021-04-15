@@ -4,7 +4,6 @@ import { Component, OnInit } from '@angular/core';
   selector: 'app-overlay',
   templateUrl: './overlay.component.html',
   styleUrls: ['./overlay.component.scss'],
-  // animations
 })
 export class OverlayComponent implements OnInit {
   constructor() {}
