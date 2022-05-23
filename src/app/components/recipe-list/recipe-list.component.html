@@ -1,0 +1,6 @@
+<ng-container *ngIf="recipeList$ | async as recipes">
+  <div *ngFor="let recipe of recipes">
+    <img src="../../../assets/svg/calendarCheck.svg" alt="Zur Einkaufsliste hinzufügen" />
+    <a href="{{ recipe.attributes.name }}">{{ recipe.attributes.name }}</a>
+  </div>
+</ng-container>
